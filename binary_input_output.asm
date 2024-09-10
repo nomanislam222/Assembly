@@ -44,13 +44,16 @@ main proc
         mov ah, 2
         mov dl, '0'
         int 21h  
-        loop Check
+        jmp Loop_
         
         
         ONE:
         mov ah, 2
         mov dl, '1'
         int 21h
+        jmp loop_
+        
+        Loop_:
         loop Check
         
     
